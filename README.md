@@ -2,4 +2,4 @@
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-Microsoft Deployment..
+Microsoft Deployment...
