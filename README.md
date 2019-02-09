@@ -3,7 +3,7 @@
 </a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="" target="_blank">
-    <img src="http://139.59.61.161/setupdata.jpg"/>
+    <img src="http://139.59.61.161/setupdata1.jpg"/>
 </a>
 
 <br>
