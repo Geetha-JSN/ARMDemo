@@ -2,7 +2,8 @@
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="" target="_blank">Setup Data
+<a href="" target="_blank">
+    <img src="http://139.59.61.161/setupdata.jpg"/>
 </a>
 
 <br>
