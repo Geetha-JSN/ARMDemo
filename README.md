@@ -3,7 +3,7 @@
 </a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://setupdataapp20190211120818.azurewebsites.net/" target="_blank">
-    <img src="http://139.59.61.161/setupdata4.jpg"/ style="border-radius:5px;">
+    <img src="http://139.59.61.161/setupdata5.jpg"/ style="border-radius:5px;">
 </a>
 
 <br>
