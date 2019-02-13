@@ -53,7 +53,7 @@ namespace MSDeployApp.Controllers
 
                 //--Fetching Cognitive Service Keys--
                 //BingNews Key
-                PowerShellInstance1.AddScript("Get-AzureRmCognitiveServicesAccountKey -ResourceGroupName 'ARM-DeployRG' -Name 'bingsearchtest' | Out-File -FilePath " + bingkeypath);
+                PowerShellInstance1.AddScript("Get-AzureRmCognitiveServicesAccountKey -ResourceGroupName 'ARM-DeployRG' -Name 'bingsearchtest'");
                 Collection<PSObject> results1 = PowerShellInstance1.Invoke();
                 foreach (PSObject result1 in results1)
                 {
@@ -62,7 +62,7 @@ namespace MSDeployApp.Controllers
                 PowerShellInstance1.Commands.Clear();
 
                 //TextAnalytics Key
-                PowerShellInstance1.AddScript("Get-AzureRmCognitiveServicesAccountKey -ResourceGroupName 'ARM-DeployRG' -Name 'textanalyticstest' | Out-File -FilePath " + textkeypath);
+                PowerShellInstance1.AddScript("Get-AzureRmCognitiveServicesAccountKey -ResourceGroupName 'ARM-DeployRG' -Name 'textanalyticstest'");
                 Collection<PSObject> results2 = PowerShellInstance1.Invoke();
                 foreach (PSObject result2 in results2)
                 {
@@ -544,14 +544,6 @@ namespace MSDeployApp.Controllers
                 PowerShellInstance1.AddScript("$resourceGroupName = '" + rgname + "'");
                 PowerShellInstance1.AddScript("New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile " + TempPath4);
                 Collection<PSObject> tfn1 = PowerShellInstance1.Invoke();
-                PowerShellInstance1.Commands.Clear();
-
-
-                //Deploying Main Logic App
-                string TempPath9 = Server.MapPath(@"~\App_Data\ARMSplit.json");
-                PowerShellInstance1.AddScript("$resourceGroupName = '" + rgname + "'");
-                PowerShellInstance1.AddScript("New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile " + TempPath9);
-                Collection<PSObject> pbt7 = PowerShellInstance1.Invoke();
                 PowerShellInstance1.Commands.Clear();
 
 
