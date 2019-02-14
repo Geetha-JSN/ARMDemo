@@ -23,11 +23,11 @@
       "type": "string"
     },
     "storage_accessKey1": {
-      "defaultValue": "",
+      "defaultValue": "16c55e42f69c425492cbc379b313f7ea",
       "type": "string"
     },
     "storage_accessKey2": {
-      "defaultValue": "",
+      "defaultValue": "81e01fb8a8a64045ad52581d3027e009",
       "type": "string"
     },
     "connections_bingsearch_name": {

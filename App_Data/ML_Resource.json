@@ -12,7 +12,7 @@
     },
     "sqlServer": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "deployserver"
     },
     "sqlDatabase": {
       "type": "string",
@@ -20,11 +20,11 @@
     },
     "sqlUser": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "admindeploy"
     },
     "sqlPassword": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "C@d3U$^#7"
     }
   },
   "variables": {},

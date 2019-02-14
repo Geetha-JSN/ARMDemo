@@ -4,15 +4,15 @@
   "parameters": {
     "serverName": {
       "type": "string",
-      "defaultValue": "j"
+      "defaultValue": "deployserver"
     },
     "serverAdminLogin": {
       "type": "string",
-      "defaultValue": "j"
+      "defaultValue": "admindeploy"
     },
     "serverAdminLoginPassword": {
       "type": "string",
-      "defaultValue": "j"
+      "defaultValue": "C@d3U$^#7"
     },
     "databaseName": {
       "type": "string",
