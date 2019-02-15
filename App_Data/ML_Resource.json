@@ -12,19 +12,19 @@
     },
     "sqlServer": {
       "type": "string",
-      "defaultValue": "deployserver"
+      "defaultValue": ""
     },
     "sqlDatabase": {
       "type": "string",
-      "defaultValue": "bingNews"
+      "defaultValue": ""
     },
     "sqlUser": {
       "type": "string",
-      "defaultValue": "admindeploy"
+      "defaultValue": ""
     },
     "sqlPassword": {
       "type": "string",
-      "defaultValue": "C@d3U$^#7"
+      "defaultValue": ""
     }
   },
   "variables": {},

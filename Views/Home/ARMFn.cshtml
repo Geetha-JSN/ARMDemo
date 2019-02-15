@@ -61,80 +61,16 @@
                             </div>
 
                             <div class="tab-content">
-                                <div class="tab-pane" id="details" style="display:none;">
-                                    <div class="row">
-                                        <form action=@Url.Action("SqlDBFn") method="post" name="sqldbinput">
-                                            <div class="col-sm-12">
-                                                <center>
-                                                    <div class="input-group">
-                                                        <h5><b>Make sure there is no Resource Group called "ARM-DeployRG"</b></h5>
-                                                    </div>
-                                                </center>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">
-                                                            payment
-                                                        </i>
-                                                    </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Azure Login ID</label>
-                                                        <input type="text" name="azuid" id="azuid" class="form-control" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons dp48">lock</i>
-                                                    </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Azure Login Password</label>
-                                                        <input type="password" name="azpwd" id="azpwd" class="form-control" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons dp48">dns</i>
-                                                    </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">SQL Server Name</label>
-                                                        <input type="text" name="dbsrc" id="dbsrc" class="form-control" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">
-                                                            payment
-                                                        </i>
-                                                    </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Server Admin Login</label>
-                                                        <input type="text" name="dbuid" id="dbuid" class="form-control" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons dp48">lock</i>
-                                                    </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Server Admin Login Password</label>
-                                                        <input type="password" name="dbpwd" id="dbpwd" class="form-control" required="">
-                                                    </div>
-                                                </div>
 
-                                                <div>
-                                                    <br />
-                                                    <img src="~/assets/img/loading.gif" id="loadingimg" style="display:none;float:right;width:7%;margin-top:-2px;" />
-                                                    <button type='submit' id="details_tab" name='next' style="float:right;background:#f44336;padding:10px;border-radius:18px;color:white;width:14%;border-style:unset;" onclick="document.getElementById('loadingimg').style.display='block'">Next</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                <div class="tab-pane" id="details" style="display:none;">
                                 </div>
+
                                 <div class="tab-pane" id="description" style="display:block;">
                                     <div>
                                         <center>
                                             <h3><b>Deployment is in progress!!!</b></h3>
                                             <h3>It might take few minutes, Please check your Azure Account Portal. </h3>
-                                            <h4><b>Resources are deployed in "ARM-DeployRG" Resource Group...</b></h4>
+                                            <h4><b>Resources will be deployed in "ARM-DeployRG" Resource Group...</b></h4>
                                             <h4><b>Database Name : "bingNews"</b></h4>
                                             <i class="material-icons" style="font-size:100px;">
                                                 backup
@@ -148,6 +84,7 @@
                                         <input type='button' name='home' value='Home' style="float:left;background:#00A4EF;padding:10px;border-radius:18px;color:white;font-size:18px;width:14%;border-style:unset;" onclick="window.location.href= '/Home/Index';" />
                                     </div>
                                 </div>
+
                             </div>
                             <div class="wizard-footer">
                                 <div class="pull-left">

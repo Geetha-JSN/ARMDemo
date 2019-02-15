@@ -4,19 +4,19 @@
   "parameters": {
     "serverName": {
       "type": "string",
-      "defaultValue": "deployserver"
+      "defaultValue": ""
     },
     "serverAdminLogin": {
       "type": "string",
-      "defaultValue": "admindeploy"
+      "defaultValue": ""
     },
     "serverAdminLoginPassword": {
       "type": "string",
-      "defaultValue": "C@d3U$^#7"
+      "defaultValue": ""
     },
     "databaseName": {
       "type": "string",
-      "defaultValue": "bingNews"
+      "defaultValue": ""
     },
     "databaseCollation": {
       "type": "string",

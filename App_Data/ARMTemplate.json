@@ -7,27 +7,27 @@
       "type": "string"
     },
     "sqlServer": {
-      "defaultValue": "deployserver",
+      "defaultValue": "",
       "type": "string"
     },
     "sqlDatabase": {
-      "defaultValue": "bingNews",
+      "defaultValue": "",
       "type": "string"
     },
     "sqlUser": {
-      "defaultValue": "admindeploy",
+      "defaultValue": "",
       "type": "string"
     },
     "sqlPassword": {
-      "defaultValue": "C@d3U$^#7",
+      "defaultValue": "",
       "type": "string"
     },
     "storage_accessKey1": {
-      "defaultValue": "16c55e42f69c425492cbc379b313f7ea",
+      "defaultValue": "",
       "type": "string"
     },
     "storage_accessKey2": {
-      "defaultValue": "81e01fb8a8a64045ad52581d3027e009",
+      "defaultValue": "",
       "type": "string"
     },
     "connections_bingsearch_name": {
