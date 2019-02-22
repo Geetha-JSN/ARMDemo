@@ -78,14 +78,15 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="material-icons dp48">dns</i>
+                                                    <i class="material-icons">
+                                                        payment
+                                                    </i>
                                                 </span>
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">SQL Server Name</label>
-                                                    <input type="text" name="dbsrc" id="dbsrc" class="form-control" required="">
+                                                    <label class="control-label">Azure Login ID</label>
+                                                    <input type="text" name="azuid" id="azuid" class="form-control" required="">
                                                 </div>
                                             </div>
-
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="input-group">
@@ -104,13 +105,11 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="material-icons">
-                                                        payment
-                                                    </i>
+                                                    <i class="material-icons dp48">lock</i>
                                                 </span>
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Server Admin Login</label>
-                                                    <input type="text" name="dbuid" id="dbuid" class="form-control" required="">
+                                                    <label class="control-label">Azure Login Password</label>
+                                                    <input type="password" name="azpwd" id="azpwd" class="form-control" required="">
                                                 </div>
                                             </div>
 
@@ -129,7 +128,64 @@
 
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons dp48">dns</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">SQL Server Name</label>
+                                                    <input type="text" name="dbsrc" id="dbsrc" class="form-control" required="">
+                                                </div>
+                                            </div>
 
+                                        </div>
+                                        <div class="col-sm-6" style="display: none;">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons dp48">dns</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">SQL Server Name</label>
+                                                    <input type="text" name="" class="form-control" required="">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">
+                                                        payment
+                                                    </i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Server Admin Login</label>
+                                                    <input type="text" name="dbuid" id="dbuid" class="form-control" required="">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-6" style="display: none;">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">
+                                                        payment
+                                                    </i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Server Admin Login</label>
+                                                    <input type="text" name="" class="form-control" required="">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
                                     <div class="row">
 
                                         <div class="col-sm-6">
@@ -143,7 +199,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                     <div>
                                         <button type='submit' id="details_tab" name='next' style="float:right;display:block;background:#00A4EF;border-radius:18px;color:white;font-size:20px;width:14%;height:7%;border-style:unset;">Run</button>
