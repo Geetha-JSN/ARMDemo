@@ -78,15 +78,14 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="material-icons">
-                                                        payment
-                                                    </i>
+                                                    <i class="material-icons dp48">dns</i>
                                                 </span>
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Azure Login ID</label>
-                                                    <input type="text" name="azuid" id="azuid" class="form-control" required="">
+                                                    <label class="control-label">SQL Server Name</label>
+                                                    <input type="text" name="dbsrc" id="dbsrc" class="form-control" required="">
                                                 </div>
                                             </div>
+
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="input-group">
@@ -105,11 +104,13 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="material-icons dp48">lock</i>
+                                                    <i class="material-icons">
+                                                        payment
+                                                    </i>
                                                 </span>
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Azure Login Password</label>
-                                                    <input type="password" name="azpwd" id="azpwd" class="form-control" required="">
+                                                    <label class="control-label">Server Admin Login</label>
+                                                    <input type="text" name="dbuid" id="dbuid" class="form-control" required="">
                                                 </div>
                                             </div>
 
@@ -128,64 +129,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="row">
-            <div class="col-sm-6">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="material-icons dp48">dns</i>
-                    </span>
-                    <div class="form-group label-floating">
-                        <label class="control-label">SQL Server Name</label>
-                        <input type="text" name="dbsrc" id="dbsrc" class="form-control" required="">
-                    </div>
-                </div>
 
-            </div>
-            <div class="col-sm-6" style="display: none;">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="material-icons dp48">dns</i>
-                    </span>
-                    <div class="form-group label-floating">
-                        <label class="control-label">SQL Server Name</label>
-                        <input type="text" name="" class="form-control" required="">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">
-                                                        payment
-                                                    </i>
-                                                </span>
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Server Admin Login</label>
-                                                    <input type="text" name="dbuid" id="dbuid" class="form-control" required="">
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm-6" style="display: none;">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">
-                                                        payment
-                                                    </i>
-                                                </span>
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Server Admin Login</label>
-                                                    <input type="text" name="" class="form-control" required="">
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
                                     <div class="row">
 
                                         <div class="col-sm-6">
@@ -199,6 +143,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                     <div>
                                         <button type='submit' id="details_tab" name='next' style="float:right;display:block;background:#00A4EF;border-radius:18px;color:white;font-size:20px;width:14%;height:7%;border-style:unset;">Run</button>
@@ -241,12 +186,11 @@
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
 <script src="~/assets/js/jquery.validate.min.js"></script>
 
-<script> 
+<script>
 
     $(document).ready(function () {
         $('#details_tab').attr('disabled', true);
-        $('#azuid,#pbid,#azpwd,#pbpwd,#dbsrc,#dbuid,#dbpwd').on('keyup', function ()
-        {
+        $('#azuid,#pbid,#azpwd,#pbpwd,#dbsrc,#dbuid,#dbpwd').on('keyup', function () {
             var azuid = $("#azuid").val();
             var pbid = $("#pbid").val();
             var azpwd = $("#azpwd").val();
@@ -255,8 +199,7 @@
             var dbuid = $("#dbuid").val();
             var dbpwd = $("#dbpwd").val();
 
-            if (azuid != "" && pbid != "" && azpwd != "" && pbpwd != "" && dbsrc != "" && dbuid != "" && dbpwd != "")
-            {
+            if (azuid != "" && pbid != "" && azpwd != "" && pbpwd != "" && dbsrc != "" && dbuid != "" && dbpwd != "") {
                 $('#details_tab').attr('disabled', false);
             } else {
                 $('#details_tab').attr('disabled', true);
@@ -264,21 +207,15 @@
         });
     });
 
-    $('#details_tab').on("click", function ()
-    {
-        
-            document.getElementById("details_tab").style.display = "none";
-            document.getElementById("details_tab1").style.display = "block";
-        
-    }
-    ); 
+    $('#details_tab').on("click", function () {
 
-    
+        document.getElementById("details_tab").style.display = "none";
+        document.getElementById("details_tab1").style.display = "block";
+
+    }
+    );
+
+
 </script>
 
 </html>
-
-
-
-
-
