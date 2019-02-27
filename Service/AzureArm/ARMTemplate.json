@@ -525,7 +525,7 @@
       "location": "westus",
       "scale": null,
       "properties": {
-        "displayName": "amnestyconn",
+        "displayName": "test",
         "parameterValues": {
           "server": "[parameters('sqlServer')]",
           "database": "[parameters('sqlDatabase')]",
