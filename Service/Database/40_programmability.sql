@@ -190,12 +190,6 @@ BEGIN
 END;
 GO
 
-/****** Object:  StoredProcedure [bpst_news].[sp_KeywordsUpdate] ******/
-CREATE PROC [bpst_news].[sp_KeywordsUpdate] AS
-  DECLARE @Keyword VARCHAR(255)  
-  SELECT @Keyword = COALESCE(@Keyword + ', ', '') + Keyword FROM bpst_news.Keywords
-UPDATE bpst_news.MySettings SET Keywords = @Keyword;
-GO
 
 CREATE PROCEDURE  [bpst_news].[sp_mergedata]
 AS
