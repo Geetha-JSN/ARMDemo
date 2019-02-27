@@ -529,7 +529,7 @@
         "parameterValues": {
           "server": "[parameters('sqlServer')]",
           "database": "[parameters('sqlDatabase')]",
-          "authType": "basic",
+          "authType": "SQL server authentication",
           "username": "[parameters('sqlUser')]",
           "password": "[parameters('sqlPassword')]"
         },
