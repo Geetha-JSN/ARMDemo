@@ -85,6 +85,10 @@
     "SubscriptionId": {
       "defaultValue": "",
       "type": "string"
+    },
+    "ResorceGroupName": {
+      "defaultValue": "",
+      "type": "string"
     }
   },
   "variables": {},
@@ -134,7 +138,7 @@
                       "text": "@{body('HTMLStripperWebHook')['NoTags']}"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'), '/functions/AbstractExtractor')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'), '/functions/AbstractExtractor')]"
                     }
                   }
                 },
@@ -150,7 +154,7 @@
                       "text": "@body('ExtractArticle')['bodyInHtml']"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/ASCIICleanerWebhook')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/ASCIICleanerWebhook')]"
                     }
                   }
                 },
@@ -187,7 +191,7 @@
                       "url": "@Json(body('UrlCleaner'))?['newUri']"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/ArticleExtractor')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/ArticleExtractor')]"
                     }
                   }
                 },
@@ -273,7 +277,7 @@
                       "html": "@{body('ArticleCleanerWebHook')['text']}"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/HTMLCleanerWebhook')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/HTMLCleanerWebhook')]"
                     }
                   }
                 },
@@ -321,7 +325,7 @@
                       "html": "@{body('HTTP')}"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/MainImageExtractor')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/MainImageExtractor')]"
                     }
                   }
                 },
@@ -337,7 +341,7 @@
                       "date": "@convertFromUtc('2019-04-22T08:00:00.0000000Z', 'Pacific Standard Time')"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/TimeUtilsWebhook')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/TimeUtilsWebhook')]"
                     }
                   }
                 },
@@ -353,7 +357,7 @@
                       "date": "@items('For_each_2')?['datePublished']"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/TimeUtilsWebhook')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/TimeUtilsWebhook')]"
                     }
                   }
                 },
@@ -365,7 +369,7 @@
                       "url": "@{items('For_each_2')?['url']}"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/UrlCleaner')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/UrlCleaner')]"
                     }
                   }
                 },
@@ -381,7 +385,7 @@
                       "url": "@Json(body('UrlCleaner'))?['newUri']"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/UrlDomainWebhook')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/UrlDomainWebhook')]"
                     }
                   }
                 },
@@ -397,7 +401,7 @@
                       "text": "@{body('HTMLStripperWebHook')['Scrubbed']}"
                     },
                     "function": {
-                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/ARM-DeployRG/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/UserDefinedEntities')]"
+                      "id": "[concat('/subscriptions/',parameters('SubscriptionId'),'/resourceGroups/',parameters('ResorceGroupName'),'/providers/','Microsoft.Web/sites/', parameters('sites_function06af1xdwag_name'),  '/functions/UserDefinedEntities')]"
                     }
                   }
                 }
