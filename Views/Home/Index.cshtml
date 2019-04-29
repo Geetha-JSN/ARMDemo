@@ -36,6 +36,11 @@
         h5 {
             color: #F25022;
         }
+
+        h6 {
+            text-transform: none;
+            color: #ada4a4;
+        }
     </style>
     <div class="image-container set-full-height">
 
@@ -68,7 +73,7 @@
                                             <div class="col-sm-12">
                                                 <center>
                                                     <div class="input-group">
-                                                        <h5><b>Make sure there is no Resource Group called "ARM-DeployRG"</b></h5>
+                                                        <h5><b>Please fill the following Azure Details</b></h5>
                                                     </div>
                                                 </center>
                                             </div>
@@ -91,11 +96,11 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="large material-icons">insert_chart</i>
+                                                    <i class="material-icons">layers</i>
                                                 </span>
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Your Power BI Service Account ID</label>
-                                                    <input type="text" name="pbid" id="pbid" class="form-control" required="">
+                                                    <label class="control-label">Resource Group Name</label>
+                                                    <input type="text" name="rgid" id="rgid" class="form-control" required="">
                                                 </div>
                                             </div>
 
@@ -117,15 +122,13 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="material-icons dp48">lock</i>
+                                                    <i class="material-icons">vpn_key</i>
                                                 </span>
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Your Power BI Service Account Password</label>
-                                                    <input type="password" name="pbpwd" id="pbpwd" class="form-control" required="">
+                                                    <label class="control-label">Subscription ID</label>
+                                                    <input type="password" name="subsid" id="subsid" class="form-control" required="">
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </div>
                                     <div class="row">
@@ -138,18 +141,6 @@
                                                     <label class="control-label">SQL Server Name</label>
                                 <input type="text" style="text-transform:lowercase" name="dbsrc" id="dbsrc" class="form-control" required="">
                                                     <p id="error" style="color:red; font-size:11px; display:none;">Only allows Lowercase letters and numbers</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">vpn_key</i>
-                                                </span>
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Subscription ID</label>
-                                                    <input type="password" name="subsid" id="subsid" class="form-control" required="">
                                                 </div>
                                             </div>
 
@@ -202,6 +193,7 @@
                                         </div>
                                     </div>
                                     <div>
+                                        <h6><b>Disclaimer: We do not store or use any of the Azure credentials provided by you in this form. These credentials are used just to login to the Azure account and complete the setup.</b></h6>
                                         <button type='submit' id="details_tab" name='next' style="float:right;display:block;background:#00A4EF;border-radius:18px;color:white;font-size:20px;width:14%;height:7%;border-style:unset;">Run</button>
                                     </div>
                                 </div>
@@ -248,15 +240,14 @@
         $('#details_tab').attr('disabled', true);
         $('#azuid,#pbid,#azpwd,#pbpwd,#dbsrc,#subsid,#dbuid,#dbpwd').on('keyup', function () {
             var azuid = $("#azuid").val();
-            var pbid = $("#pbid").val();
+            var rgid = $("#rgid").val();
             var azpwd = $("#azpwd").val();
-            var pbpwd = $("#pbpwd").val();
             var dbsrc = $("#dbsrc").val();
             var subsid = $("#subsid").val();
             var dbuid = $("#dbuid").val();
             var dbpwd = $("#dbpwd").val();
 
-            if (azuid != "" && pbid != "" && azpwd != "" && pbpwd != "" && dbsrc != "" && subsid !="" && dbuid != "" && dbpwd != "") {
+            if (azuid != "" && rgid != "" && azpwd != "" && dbsrc != "" && subsid !="" && dbuid != "" && dbpwd != "") {
                 $('#details_tab').attr('disabled', false);
             } else {
                 $('#details_tab').attr('disabled', true);
