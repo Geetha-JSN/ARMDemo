@@ -17,12 +17,12 @@
         "comments": "Generalized from resource: '/subscriptions/6efc9ada-f2b2-472d-9d8e-fb0ab1e29d0c/resourceGroups/TestRG/providers/Microsoft.CognitiveServices/accounts/bingsearchtest'.",
         "type": "Microsoft.CognitiveServices/accounts",
         "sku": {
-          "name": "S0"
+          "name": "S2"
         },
         "kind": "Bing.Search.v7",
         "name": "[parameters('accounts_bingsearchtest_name')]",
         "apiVersion": "2016-02-01-preview",
-        "location": "East US",
+        "location": "global",
         "scale": null,
         "properties": {},
         "dependsOn": []
@@ -31,7 +31,7 @@
         "comments": "Generalized from resource: '/subscriptions/6efc9ada-f2b2-472d-9d8e-fb0ab1e29d0c/resourceGroups/TestRG/providers/Microsoft.CognitiveServices/accounts/textanalyticstest'.",
         "type": "Microsoft.CognitiveServices/accounts",
         "sku": {
-          "name": "S0"
+          "name": "S2"
         },
         "kind": "TextAnalytics",
         "name": "[parameters('accounts_textanalyticstest_name')]",
