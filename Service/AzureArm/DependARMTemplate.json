@@ -22,7 +22,7 @@
         "kind": "Bing.Search.v7",
         "name": "[parameters('accounts_bingsearchtest_name')]",
         "apiVersion": "2016-02-01-preview",
-        "location": "West US",
+        "location": "East US",
         "scale": null,
         "properties": {},
         "dependsOn": []
